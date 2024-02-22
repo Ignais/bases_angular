@@ -1,0 +1,37 @@
+<h1>{{ name }}</h1>
+
+<dl>
+  <table>
+    <tbody>
+      <tr>
+        <td style="font-weight: bold;">Name:</td>
+        <td>{{ name }}</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">Edad: </td>
+        <td>{{ age }}</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">Algun Metodo:</td>
+        <td>{{ getFullData() }}</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">Nombre capitalizado: </td>
+        <td>{{ Name }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</dl>
+
+<button
+*ngIf="name !== 'Resoples'"
+(click)="changeName()" type="button" class="btn btn-primary mx-2">
+  Cambiar Nombre
+</button>
+
+<button
+ *ngIf="age !== 70"
+ (click)="changeAge()" type="button" class="btn btn-primary">
+  Cambiar Edad
+</button>
